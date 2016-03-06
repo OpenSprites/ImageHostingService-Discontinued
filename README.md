@@ -1,11 +1,11 @@
 ##OpenSprites Image Hosting Service
-This is the OpenSprites Image Hosting Service repository. The facility will be built in Node.js.
+This is the OpenSprites Image Hosting Service repository. The facility is built in Node.js.
 
 ###Installation
 `git clone https://github.com/OpenSprites/ImageHostingService.git`  
 `cd ImageHostingService`  
 `npm install`   
-`node index.js`  
+`npm start # development` or `node index.js # production`  
 
 ###Plan:
 ###Introduction

@@ -2,10 +2,13 @@
   "name": "opensprites-imagehostingservice",
   "version": "0.0.1",
   "description": "OpenSprites hosting facility",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/OpenSprites/ImageHostingService.git"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/gulp"
   },
   "keywords": [
     "OpenSprites"
@@ -18,5 +21,13 @@
   "dependencies": {
     "express": "~4.13.4",
     "jimp": "~0.2.21"
+  },
+  "devDependencies": {
+    "babel-preset-es2016-node5": "~1.1.2",
+    "gulp-babel": "~6.1.2",
+    "gulp-nodemon": "~2.0.6",
+    "gulp": "~3.9.1",
+    "gulp-stylus": "~2.3.0",
+    "gulp-sourcemaps": "~1.6.0"
   }
 }
