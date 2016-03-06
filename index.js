@@ -9,6 +9,8 @@ const chalk = require('chalk')
 
 let app = express()
 
+app.set('trust proxy', true)
+
 app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/public/index.html')
 })
