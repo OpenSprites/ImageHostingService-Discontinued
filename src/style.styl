@@ -1,4 +1,15 @@
+@require 'normalize'
+
+$os = #659593
+
 body
-	margin 0
-	padding 0
-	background white
+	line-height 1.7
+
+a
+	color $os
+	border-bottom 1px solid $os
+	text-decoration none
+
+	&:hover
+		color darken($os, 40%)
+		border-bottom-color darken($os, 40%)

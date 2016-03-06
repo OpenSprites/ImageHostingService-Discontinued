@@ -17,9 +17,9 @@ app.use(express.static('dist'))
 app.use(express.static('public'))
 
 app.get('*', function(req, res) {
-	res.sendFile(__dirname + '/views/upload.html')
+	res.sendFile(__dirname + '/public/404.html')
 })
 
 app.listen(3000, function() {
-	console.log('OpenSprites ImageHostingService is listening on port 3000!')
+	console.log('OpenSprites Image Hosting is listening on port 3000!')
 })
