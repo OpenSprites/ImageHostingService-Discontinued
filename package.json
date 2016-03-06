@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "express": "~4.13.4",
-    "jimp": "~0.2.21"
+    "jimp": "~0.2.21",
+    "chalk": "~1.1.1"
   },
   "devDependencies": {
     "babel-preset-es2016-node5": "~1.1.2",
