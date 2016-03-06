@@ -1,6 +1,12 @@
 ##OpenSprites Image Hosting Service
 This is the OpenSprites Image Hosting Service repository. The facility will be built in Node.js.
 
+###Installation
+`git clone https://github.com/OpenSprites/ImageHostingService.git`
+`cd ImageHostingService`
+`npm install`
+`node index.js`
+
 ###Plan:
 ###Introduction
 At present, a Scratch user who wishes to embed an image into a forum post is required to upload the image to a third-party hosting service that has been white-listed by the Scratch Team. The majority of the white-listed hosting services are not intended for use by children, and therefore display advertising banners that may not be appropriate for young ages. There is also the risk that unsuitable images uploaded by other web users held on a white-listed host can be posted onto the Scratch forums.
@@ -9,10 +15,10 @@ At present, a Scratch user who wishes to embed an image into a forum post is req
 It has been a long proposed idea to integrate image hosting directly into the OpenSprites website, which does not have the aforementioned issues; this would provide a safe and monitored facility to host images intended for the forums. However, due to the complexity of modifying the behaviour between resources and images intended for hosting (these would need to be hidden from the rest of the website, yet still be visible to staff and the owner), it has become a less attractive option. This is also not considering recent issues regarding the rejection of certain image formats by the website.
 
 ###Proposed Plan
-It has been decided that to avoid the issue of compatibility with main OpenSprites website, a separate hosting facility will be built from the ground up; providing a clean code-base and efficient structuring. 
+It has been decided that to avoid the issue of compatibility with main OpenSprites website, a separate hosting facility will be built from the ground up; providing a clean code-base and efficient structuring.
 	After a (suspicious) poll, it was decided that the service will be built in Node.js, rather than PHP; Node is not only a more recent web-technology, but also offers higher performance in handling requests than PHP which is crucial for responding quickly with images.
 	While more developers on the OpenSprites team are familiar with PHP, I have been reliably informed that Node.js is sufficiently easy to pick up if one has knowledge of JavaScript. It should also be noted that the use of dated technologies, such as PHP, is frowned upon within the advanced community.
-	
+
 ###Plan Details
 #####Minimum Requirements
 The image hosting service has a few minimum requirements which are necessary to insure full integration with the main OpenSprites website.
@@ -23,11 +29,11 @@ The image hosting service has a few minimum requirements which are necessary to 
 * Images 30 days old which have never been embedded are erased, along with images which have not been accessed for 250 days.
 * Linking to images on Scratch only.
 * A name for the service.
+* SSL - all notable browsers suppress content from third-parties if the current site uses SSL and the third-party does not.
 
 #####Preferred Extras
 * The ability for a user to delete and view their images.
 * Low/no compression.
-* SSL - some browsers suppress content from third-parties if the current site uses SSL and the third-party does not.
 
 #####Pros
 * As outlined above, OpenSprites is committed to not displaying adverts, which keeps content appropriate for young users.

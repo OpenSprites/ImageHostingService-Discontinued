@@ -1,0 +1,22 @@
+{
+  "name": "opensprites-imagehostingservice",
+  "version": "0.0.1",
+  "description": "OpenSprites hosting facility",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenSprites/ImageHostingService.git"
+  },
+  "keywords": [
+    "OpenSprites"
+  ],
+  "author": "OpenSprites Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OpenSprites/ImageHostingService/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.4",
+    "jimp": "~0.2.21"
+  }
+}
