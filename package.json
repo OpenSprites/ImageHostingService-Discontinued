@@ -19,10 +19,11 @@
     "url": "https://github.com/OpenSprites/ImageHostingService/issues"
   },
   "dependencies": {
+    "babelify": "^6.0.2",
     "browserify": "^13.0.0",
     "express": "~4.13.4",
-    "gulp-browserify": "^0.5.1",
-    "jimp": "~0.2.21"
+    "jimp": "~0.2.21",
+    "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
     "babel-preset-es2016-node5": "~1.1.2",
