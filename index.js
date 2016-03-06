@@ -4,7 +4,7 @@ const fs = require('fs')
 const express = require('express')
 const jimp = require('jimp')
 const os = require('os')
-const https = require('http')
+const https = require('https')
 const chalk = require('chalk')
 
 let app = express()
@@ -26,7 +26,7 @@ app.get('*', function(req, res) {
 
 // ssl for opensprites.org *only*
 if(os.hostname() == 'opensprites.org') {
-	serve.createServer({
+	https.createServer({
 		key: fs.readFileSync('/home/admin/conf/web/ssl.opensprites.org.key'),
 		cert: fs.readFileSync('/home/admin/conf/web/ssl.opensprites.org.crt')
 	}, app).listen(3000, function() {
