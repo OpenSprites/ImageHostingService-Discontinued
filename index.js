@@ -75,13 +75,15 @@ app.get('/:id', function(req, res) {
 			console.log(`[  ${chalk.yellow('warn')}  ] We're on OpenSprites, but somebody wants a file from ${req.get('host')}. Ignoring.`)
 
 			res.sendFile(__dirname + '/public/404.html')
+
+			return
 		}
-	} else {
-		fs.stat(file, function(err, stat) {
-			if(err) res.sendFile(__dirname + '/public/404.html')
-			else res.sendFile(file)
-		})
 	}
+	
+	fs.stat(file, function(err, stat) {
+		if(err) res.sendFile(__dirname + '/public/404.html')
+		else res.sendFile(file)
+	})
 })
 
 app.use('/dist', express.static('dist'))
