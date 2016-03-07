@@ -11,6 +11,8 @@ const multer = require('multer')
 const upload = multer()
 const svg2png = require('svg2png')
 
+fs.makedirSync(__dirname + '/uploads')
+
 let app = express()
 app.set('trust proxy', true)
 
