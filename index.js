@@ -79,7 +79,7 @@ app.get('/:id', function(req, res) {
 			return
 		}
 	}
-	
+
 	fs.stat(file, function(err, stat) {
 		if(err) res.sendFile(__dirname + '/public/404.html')
 		else res.sendFile(file)

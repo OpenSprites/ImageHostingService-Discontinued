@@ -1,15 +1,83 @@
 @require 'normalize'
 
 $os = #659593
+$light = #C8DDDB
+$dark = #333333
 
 body
 	line-height 1.7
+	color $dark
+	background-color $light
+	font-family 'Fira Sans', sans-serif
 
-a
+main a
 	color $os
 	border-bottom 1px solid $os
 	text-decoration none
+	transition border-bottom-color 100ms
 
 	&:hover
 		color darken($os, 40%)
 		border-bottom-color darken($os, 40%)
+
+nav
+	background-color $os
+	box-shadow 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+	height 72px
+	margin-bottom 72px
+	user-select none
+
+	a
+		height 64px
+		padding 4px 24px
+		line-height 64px
+		text-align center
+		display inline-block
+		color white
+		text-decoration none
+		transition background-color 100ms
+
+		&:hover, &.active
+			background-color rgba(0, 0, 0, 0.05)
+
+	.opensprites
+		background url(https://opensprites.org/assets/images/os-logotype.svg)
+		background-repeat no-repeat
+		background-position center
+		background-size 144px
+		min-width 108px
+
+		position absolute
+		left 50%
+		margin-left -78px
+
+	.upload
+		float right
+		margin-right 20px
+
+#upload-form
+	#upload-file
+		width 0.1px
+		height 0.1px
+		opacity 0
+		overflow hidden
+		position absolute
+		z-index -1
+
+	#upload-file + label
+		font-size 1.25em
+		display inline-block
+		margin auto
+		text-align center
+		padding 8px 16px
+		border-radius 6px
+		color $os
+		transition box-shadow 200ms
+		cursor pointer
+		background-color white
+		position: absolute
+		left 50%
+		transform translate(-50%)
+
+		&:hover
+			box-shadow 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)

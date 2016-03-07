@@ -8,16 +8,24 @@
 
   <link rel='stylesheet' href='dist/style.css'>
   <script async src='dist/index.js'></script>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,400italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-  <form enctype='multipart/form-data' id='upload-form'
-    method='post'
-    action='/upload'
-  >
-    <input id='upload-file' type='file' name='file'>
-    <button type='button' id='upload'>Upload</button>
-  </form>
+  <nav>
+		<a class='opensprites' href='/'></a>
+		<a class='upload active' href='/upload'>Upload</a>
+	</nav>
+
+  <main>
+    <form enctype='multipart/form-data' id='upload-form'
+      method='post'
+      action='/upload'
+    >
+      <input id='upload-file' type='file' name='file'>
+      <label for="file">Choose a file...</label>
+    </form>
+  </main>
 </body>
 
 </html>
