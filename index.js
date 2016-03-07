@@ -71,7 +71,7 @@ app.get('/:id', function(req, res) {
 
 	// only allow displaying on Scratch or OpenSprites
 	if(os.hostname() == 'opensprites.org') {
-		if(req.get('host') !== 'scratch.mit.edu' && req.get('host') !== 'opensprites.org') {
+		if(req.get('host') !== 'scratch.mit.edu' && req.get('host') !== 'opensprites.org' && req.get('host') !== 'opensprites.org:3000') {
 			console.log(`[  ${chalk.yellow('warn')}  ] We're on OpenSprites, but somebody wants a file from ${req.get('host')}. Ignoring.`)
 
 			res.sendFile(__dirname + '/public/404.html')
