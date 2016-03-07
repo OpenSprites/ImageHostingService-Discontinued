@@ -26,7 +26,8 @@
     "ajax-promise": "~0.8.1",
     "multer": "~1.1.0",
     "shortid": "~2.2.4",
-    "svg2png": "~3.0.0"
+    "svg2png": "~3.0.0",
+    "mkdirp": "~0.5.1"
   },
   "devDependencies": {
     "babel-preset-es2016-node5": "~1.1.2",

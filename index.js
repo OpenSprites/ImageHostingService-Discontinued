@@ -10,8 +10,9 @@ const shortid = require('shortid')
 const multer = require('multer')
 const upload = multer()
 const svg2png = require('svg2png')
+const mkdirp = require('mkdirp')
 
-fs.mkdirSync(__dirname + '/uploads')
+mkdirp(__dirname + '/uploads')
 
 let app = express()
 app.set('trust proxy', true)
