@@ -50,7 +50,7 @@ function fileUpload(req, res) {
 		img.contain(640, 720) // fit to scratch forums max image size
 		img.autocrop() // crop same-color borders from image (if any)
 
-		img.write(__dirname + '/uploads/' + id + '.png', function(err) {
+		img.write(__dirname + '/uploads/' + id + '.png', function(e) {
 			if(e) {
 				console.log(`[  ${chalk.red.bold('err!')}  ] ${e}`)
 				res.redirect('/upload/fail')
