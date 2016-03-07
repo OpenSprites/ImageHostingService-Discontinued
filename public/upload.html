@@ -6,13 +6,18 @@
 
   <title>Upload an image • OpenSprites Image Hosting</title>
 
-  <link rel='stylesheet' href='style.css'>
-  <script async src='index.js'></script>
+  <link rel='stylesheet' href='dist/style.css'>
+  <script async src='dist/index.js'></script>
 </head>
 
 <body>
-  <input id='upload-file' type='file'>
-  <button id='upload'>Upload</button>
+  <form enctype='multipart/form-data' id='upload-form'
+    method='post'
+    action='/upload'
+  >
+    <input id='upload-file' type='file' name='file'>
+    <button type='button' id='upload'>Upload</button>
+  </form>
 </body>
 
 </html>

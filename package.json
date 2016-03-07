@@ -21,7 +21,12 @@
   "dependencies": {
     "express": "~4.13.4",
     "jimp": "~0.2.21",
-    "chalk": "~1.1.1"
+    "chalk": "~1.1.1",
+    "qwery": "~4.0.0",
+    "ajax-promise": "~0.8.1",
+    "multer": "~1.1.0",
+    "shortid": "~2.2.4",
+    "svg2png": "~3.0.0"
   },
   "devDependencies": {
     "babel-preset-es2016-node5": "~1.1.2",
@@ -30,7 +35,7 @@
     "gulp": "~3.9.1",
     "gulp-stylus": "~2.3.0",
     "gulp-sourcemaps": "~1.6.0",
-    "babelify": "^6.0.2",
+    "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "vinyl-source-stream": "^1.1.0"
   }

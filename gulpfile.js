@@ -9,9 +9,9 @@ const sourcemaps = require('gulp-sourcemaps')
 const browserify = require('browserify')
 const babelify = require('babelify')
 
-gulp.task('default', ['css', 'js', 'watch'])
+gulp.task('default', ['watch'])
 
-gulp.task('watch', function() {
+gulp.task('watch', ['css', 'js'], function() {
 	nodemon({
 		script: 'index.js',
 		ext: 'html js styl',
@@ -35,7 +35,9 @@ gulp.task('js', function() {
 		entries: 'src/index.js',
 		debug: true
 	})
-	.transform(babelify)
+	.transform(babelify, {
+		presets: ['es2016-node5']
+	})
 	.bundle()
 	.pipe(source('index.js'))
 	.pipe(gulp.dest('dist'))
