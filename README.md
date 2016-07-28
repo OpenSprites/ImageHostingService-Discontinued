@@ -1,3 +1,6 @@
+#Discontinued
+This project has been discontinued due to an image hosting facility being included in OpenSprites Next. The repository remains for historical reasons.
+
 ##OpenSprites Image Hosting Service
 This is the OpenSprites Image Hosting Service repository. The facility is built in Node.js.
 
